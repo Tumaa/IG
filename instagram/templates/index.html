@@ -8,14 +8,14 @@
 		<div class="col-md-8 justify-content-center">
 			<ul id="myUL" class="list-unstyled">
 				{% for post in posts %}
-				<li class="filterDiv {{image.category}}"><a href="#"><span class="post-user">{{post.user}}</span>
+				<li class="filterDiv {{image.category}}"><di href="#"><span class="post-user">{{post.user}}</span>
 					<div class="card rounded my-4">
 						<div class="card-title m-0">
-							<a class="user-head" href="{% url 'aboutuser' user_id=post.user.id %}">
+							<div class="user-head" href="{% url 'aboutuser' user_id=post.user.id %}">
 								<button class="btn mx-3 bg-transparent btn-lg" data-toggle="tooltip" data-placement="bottom"
 								        title="User">
 									<img src="{{ user.profile.image.url }}" class="rounded-circle border" width="35" height="35"></button>
-								<span class="username">{{post.user}}</span></a>
+								<span class="username">{{post.user}}</span></div>
 						</div>
 						<img src="{{ post.image.url }}" class="img-fluid" alt="..." height="100%" width="100%">
 						<div class="card-body">

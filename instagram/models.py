@@ -25,7 +25,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-pk"]
-
+    
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
@@ -76,20 +76,7 @@ class Profile(models.Model):
     def follows(self):
         return [follow.followee for follow in self.following.all()]
 
-
-# class Likes(models.Model):
-#     user = models.ForeignKey(Profile, related_name='mylikes')
-#     photo = models.ForeignKey(Post, related_name='photolikes')
-
-
-# class Saves(models.Model):
-#     user = models.ForeignKey(Profile, related_name='saves')
-#     photo = models.ForeignKey(Post)
-
-#     class Meta:
-#         ordering = ["-pk"]
-
-
-# class Follows(models.Model):
-#     follower = models.ForeignKey(Profile, related_name='following')
-#     followee = models.ForeignKey(Profile, related_name='followers')
+    @classmethod
+    def search_by_name(cls,search_term):
+            profile = cls.objects.filter(name__icontains=search_term)
+            return profile

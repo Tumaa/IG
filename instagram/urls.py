@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^accounts/profile/$', views.profile, name='profile'),
+    url(r'^search/', views.search_results, name='search_results'),
     url(r'^new/post$', views.new_post, name='new_post'),
     url(r'^profile/edit/$', views.edit, name='edit'),
     url(r'^like/(?P<post_id>\d+)$', views.like, name='like'),
