@@ -38,7 +38,7 @@ NO known Bugs.
 * CSS
 
 
-<!-- ## Support and contact details
+## Support and contact details
 Please reach out to me at 'katanahussein17@yahoo.com' for any queries concerning this or any other code.
 ### License
-MIT LICENSE   [2019] -->
+MIT LICENSE   [2019]
